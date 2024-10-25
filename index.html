@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <h1>Weather Dashboard</h1>
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="Enter city name...">
+        <button onclick="getWeather()">Search</button>
+      </div>
+    </header>
+
+    <section class="current-weather">
+      <h2 id="city-name">City</h2>
+      <div class="weather-details">
+        <div class="temp">
+          <h3 id="temperature">--°C</h3>
+          <p id="weather-description">Description</p>
+        </div>
+        <div class="additional-info">
+          <p>Humidity: <span id="humidity">--%</span></p>
+          <p>Wind: <span id="wind-speed">-- km/h</span></p>
+          <p>Pressure: <span id="pressure">-- hPa</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="weekly-forecast">
+      <h2>Weekly Forecast</h2>
+      <div class="forecast-container" id="forecast-container">
+        <!-- Weekly weather cards will be appended here dynamically -->
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
